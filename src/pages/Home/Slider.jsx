@@ -35,7 +35,7 @@ const Slider = () => {
                                 <h1 className="text-2xl md:text-5xl font-bold text-white pt-20 md:pt-2"> Book is not enough for learning
                                 </h1>
                                 <h1 className="text-2xl md:text-5xl font-bold text-white mb-5">
-                                    True learnimg comes from practical experience
+                                    True learning comes from practical experience
                                 </h1>
                             </Slide>
 
@@ -63,7 +63,7 @@ const Slider = () => {
                                 <h1 className="text-2xl md:text-5xl font-bold text-white pt-20 md:pt-2"> Book is not enough for learning
                                 </h1>
                                 <h1 className="text-2xl md:text-5xl font-bold text-white mb-5">
-                                    True learnimg comes from practical experience
+                                    True learning comes from practical experience
                                 </h1>
                             
 
@@ -91,7 +91,7 @@ const Slider = () => {
                                 <h1 className="text-2xl md:text-5xl font-bold text-white pt-20 md:pt-2"> Book is not enough for learning
                                 </h1>
                                 <h1 className="text-2xl md:text-5xl font-bold text-white mb-5">
-                                    True learnimg comes from practical experience
+                                    True learning comes from practical experience
                                 </h1>
                             
 
@@ -119,7 +119,7 @@ const Slider = () => {
                                 <h1 className="text-2xl md:text-5xl font-bold text-white pt-20 md:pt-2"> Book is not enough for learning
                                 </h1>
                                 <h1 className="text-2xl md:text-5xl font-bold text-white mb-5">
-                                    True learnimg comes from practical experience
+                                    True learning comes from practical experience
                                 </h1>
                             
 
