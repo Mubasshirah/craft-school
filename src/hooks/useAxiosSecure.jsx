@@ -5,7 +5,7 @@ import { useEffect } from "react";
 import axios from "axios";
 // axiosSecure ta useAxiosSecure hook er bairwe call korte hobe,noeto vitore call korle payment e gia jokhon useEffect e axiosSecure ke dependency hisebe dia hobe tokhon backend ebar bar call hoite thakbe hook tar jnno and error dekhabe
 const axiosSecure=axios.create({
-    baseURL: 'http://localhost:5000',
+    baseURL: 'https://assignment-12-craft-school-server.vercel.app',
 }); 
 const useAxiosSecure=()=>{
     const {logOut}=useContext(AuthContext);

@@ -16,7 +16,7 @@ const ActivityCard = ({activity}) => {
         if (user && user.email) {
             const selectedItem={id:_id,name,image,price,email:user.email};
             console.log(selectedItem)
-            fetch('http://localhost:5000/selected', {
+            fetch('https://assignment-12-craft-school-server.vercel.app/selected', {
               method: "POST",
               headers: {
                 'content-type':'application/json'
