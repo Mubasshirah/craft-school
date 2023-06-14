@@ -11,7 +11,7 @@ const ActivityCard = ({activity}) => {
     const [,refetch]=useSelectedClass();
     const location = useLocation();
 
-    const {name,image,_id,enrolled_students,instructor_name,instructor_image,instructor_email,available_seats,price}=activity;
+    const {name,image,_id,instructor_name,available_seats,price}=activity;
      const handleAddToSelect= item=>{
         if (user && user.email) {
             const selectedItem={id:_id,name,image,price,email:user.email};

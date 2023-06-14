@@ -14,6 +14,7 @@ import NotFound from "../components/NotFound";
 import DashBoard from "../layout/DashBoard";
 import MySelectedClasses from "../pages/studenDashboard/MySelectedClasses";
 import MyEnrolledClasses from "../pages/studenDashboard/MyEnrolledClasses";
+import Payment from "../pages/studenDashboard/Payment";
 
 export const router = createBrowserRouter([
   {
@@ -59,6 +60,10 @@ export const router = createBrowserRouter([
         {
           path: 'enrolled',
           element: <MyEnrolledClasses></MyEnrolledClasses>
+        },
+        {
+          path:'payment',
+          element:<Payment></Payment>
         }
       ]
 

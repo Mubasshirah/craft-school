@@ -1,5 +1,6 @@
 import Swal from "sweetalert2";
 import useSelectedClass from "../../hooks/useSelectedClass";
+import { Link } from "react-router-dom";
 
 
 const MySelectedClasses = () => {
@@ -74,7 +75,7 @@ const MySelectedClasses = () => {
                                  <button onClick={()=>handleDelete(row)}  className="px-6 py-3   hover:bg-gray-100 hover:text-black text-white rounded-lg bg-opacity-30 bg-green-900">Delete</button>
                              </td>
                              <td>
-                                 <button  className="px-6 py-3   hover:bg-gray-100 hover:text-black text-white rounded-lg bg-opacity-30 bg-green-900">Pay</button>
+                                <Link to='/dashboard/payment'> <button  className="px-6 py-3   hover:bg-gray-100 hover:text-black text-white rounded-lg bg-opacity-30 bg-green-900">Pay</button></Link>
                              </td>
                          </tr>
                             )}
