@@ -10,4 +10,4 @@
 > i have used react icons,sweetAlert,react hook form, react query,axios, react swiper.
 
 
-live link: 
+live link: https://assignment-12-craft-school.web.app/
