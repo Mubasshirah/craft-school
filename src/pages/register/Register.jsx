@@ -3,6 +3,7 @@ import loginimg from '../../assets/logo/login&register.png'
 import { Link, useNavigate } from 'react-router-dom';
 import { useContext } from 'react';
 import { AuthContext } from '../../provider/AuthProvider';
+import SocialLogin from '../../shared/SocialLogin';
 
 const Register = () => {
     const navigate=useNavigate();
@@ -63,9 +64,9 @@ const Register = () => {
             pattern:/(?=.*[A-Z])(?=.*[!@#$&*])/
             })} 
             placeholder="password" className="input input-bordered" />
-          {errors.password?.type==='required' && <span>This field is required</span>}
-          {errors.password?.type==='minLength' && <span>This field has 6 character</span>}
-          {errors.password?.type==='pattern' && <span>This field has 6 character and uppercase</span>}
+          {errors.password?.type==='required' && <span className='text-red-700'>This field is required</span>}
+          {errors.password?.type==='minLength' && <span className='text-red-700'>This field should have 6 character</span>}
+          {errors.password?.type==='pattern' && <span className='text-red-700'>This field should have one uppercase and one special character</span>}
          
         </div>
       
@@ -76,6 +77,9 @@ const Register = () => {
       </form>
       <div className="text-center mb-5 ">
             <p>Already register! <Link className='text-primary' to='/login'>Login</Link></p>
+          </div>
+          <div>
+            <SocialLogin></SocialLogin>
           </div>
     </div>
   </div>

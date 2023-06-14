@@ -3,6 +3,8 @@ import { AuthContext } from "../../provider/AuthProvider";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import loginimg from '../../assets/logo/login&register.png'
 import { useForm } from "react-hook-form";
+import Swal from "sweetalert2";
+import SocialLogin from "../../shared/SocialLogin";
 
 const Login = () => {
     const { signIn } = useContext(AuthContext);
@@ -16,9 +18,16 @@ const Login = () => {
         .then(result=>{
             const signedInUser=result.user;
             console.log(signedInUser);
-    
-           
                 reset();
+                Swal.fire({
+                  title: 'user logged in successful',
+                  showClass: {
+                    popup: 'animate__animated animate__fadeInDown'
+                  },
+                  hideClass: {
+                    popup: 'animate__animated animate__fadeOutUp'
+                  }
+                })
                 navigate(from,{replace:true});
          
          
@@ -58,6 +67,9 @@ const Login = () => {
       </form>
       <div className="text-center mb-5 ">
             <p>New here! <Link className='text-primary' to='/register'>Register</Link></p>
+          </div>
+          <div>
+            <SocialLogin></SocialLogin>
           </div>
     </div>
   </div>
