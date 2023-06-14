@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import  { useContext } from 'react';
 import { AuthContext } from '../provider/AuthProvider';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { FaGoogle } from 'react-icons/fa';
