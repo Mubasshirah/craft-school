@@ -15,6 +15,9 @@ import DashBoard from "../layout/DashBoard";
 import MySelectedClasses from "../pages/studenDashboard/MySelectedClasses";
 import MyEnrolledClasses from "../pages/studenDashboard/MyEnrolledClasses";
 import Payment from "../pages/studenDashboard/Payment";
+import ManageUsers from "../pages/AdminDashboard/ManageUsers";
+import ManageClass from "../pages/AdminDashboard/ManageClass";
+import AdminRoute from "./AdminRoute";
 
 export const router = createBrowserRouter([
   {
@@ -64,6 +67,14 @@ export const router = createBrowserRouter([
         {
           path:'payment',
           element:<Payment></Payment>
+        },
+        {
+          path:'manageuser',
+          element:<AdminRoute><ManageUsers></ManageUsers></AdminRoute>
+        },
+        {
+          path:'manageclass',
+          element:<AdminRoute><ManageClass></ManageClass></AdminRoute>
         }
       ]
 
