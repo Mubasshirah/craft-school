@@ -15,7 +15,7 @@ const MySelectedClasses = () => {
             confirmButtonText: 'Yes, delete it!'
           }).then((result) => {
             if (result.isConfirmed) {
-              fetch(`https://ms-12-final-project-server.vercel.app/carts/${item._id}`,{
+              fetch(`http://localhost:5000/selected/${item._id}`,{
                 method: "DELETE"
               })
               .then(res=>res.json())
@@ -24,7 +24,7 @@ const MySelectedClasses = () => {
                     refetch();
                     Swal.fire(
                         'Deleted!',
-                        'Your file has been deleted.',
+                        'This class has been deleted.',
                         'success'
                       )
                 }
