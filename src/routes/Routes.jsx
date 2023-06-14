@@ -10,6 +10,7 @@ import Login from "../pages/login/Login";
 import Register from "../pages/register/Register";
 import Enroll from "../pages/enroll/Enroll";
 import PrivateRoute from "./PrivateRoute";
+import NotFound from "../components/NotFound";
 
   export const router = createBrowserRouter([
     {
@@ -42,4 +43,8 @@ import PrivateRoute from "./PrivateRoute";
         }
       ]
     },
+    {
+      path:'*',
+      element:<NotFound></NotFound>
+    }
   ]);
