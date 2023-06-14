@@ -1,14 +1,16 @@
 
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import logo from '../assets/logo/logo.jpg'
 import { useContext } from 'react';
 import { AuthContext } from '../provider/AuthProvider';
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext);
+    const navigate=useNavigate()
     const handleLogOut = () => {
         logOut()
             .then(() => { 
-                localStorage.removeItem('access-token')
+                localStorage.removeItem('access-token');
+                navigate('/');
             })
             .catch(error => console.log(error))
     }
