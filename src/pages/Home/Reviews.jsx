@@ -6,7 +6,7 @@ import SharedTitle from "../../shared/SharedTitle";
 import { VscTriangleDown } from "react-icons/vsc";
 const Reviews = () => {
     return (
-        <div>
+        <div >
             <SharedTitle heading='Reviews from our students'></SharedTitle>
             <Swiper
                 slidesPerView={5}
@@ -16,27 +16,203 @@ const Reviews = () => {
                     clickable: true,
                 }}
                 modules={[Pagination]}
-                className="mySwiper"
+                className="mySwiper "
             >
-                <SwiperSlide>
-                    <div className="card w-96 bg-base-100 shadow-xl">
-                        <figure className="px-10 pt-10">
-                            <img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" className="rounded-xl" />
-                        </figure>
+                <SwiperSlide className="m-6">
+                    <div className="card w-72 h-[250px] bg-base-100 shadow-xl m-6">
+                       
                         <div className="card-body items-center text-center">
-                            <h2 className="card-title">Shoes!</h2>
-                            <p>If a dog chews shoes whose shoes does he choose?</p>
-                            <div className="card-actions">
-                                <button className="btn btn-primary">Buy Now</button>
-                            </div>
+                            <h2 className="card-title">Danial Morgan</h2>
+                            <span className="text-3xl text-green-900 opacity-30"><VscTriangleDown></VscTriangleDown></span>
+                            <p>I am so pleased with their classes.They have extra-ordinary instructors</p>
+                            
                         </div>
                     </div>
 
-                    {/* <h1>Danial Morgan</h1>
-           <VscTriangleDown></VscTriangleDown>
-           <p>I am so pleased with their classes.They have extra-ordinary instructors</p> */}
+                  
                 </SwiperSlide>
+                <SwiperSlide className="m-6">
+                    <div className="card w-72 h-[250px]  bg-base-100 shadow-xl m-6">
+                       
+                        <div className="card-body items-center text-center">
+                            <h2 className="card-title">Rebeka sara</h2>
+                            <span className="text-3xl text-green-900 opacity-30"><VscTriangleDown></VscTriangleDown></span>
+                            <p>The best classes I ever had in my life.These practical knowledge will help me to choose my career</p>
+                            
+                        </div>
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide className="m-6">
+                    <div className="card w-72 h-[250px] bg-base-100 shadow-xl m-6">
+                       
+                        <div className="card-body items-center text-center">
+                            <h2 className="card-title">Sami quraeshi</h2>
+                            <span className="text-3xl text-green-900 opacity-30"><VscTriangleDown></VscTriangleDown></span>
+                            <p>The best vacation i ever passesd for these classes.I recommend all of you to do their courses</p>
+                            
+                        </div>
+                    </div>
 
+                  
+                </SwiperSlide>
+                <SwiperSlide className="m-6">
+                    <div className="card w-72 h-[250px] bg-base-100 shadow-xl m-6">
+                       
+                        <div className="card-body items-center text-center">
+                            <h2 className="card-title">Rebeka sara</h2>
+                            <span className="text-3xl text-green-900 opacity-30"><VscTriangleDown></VscTriangleDown></span>
+                            <p>The best classes I ever had in my life.These practical knowledge will help me to choose my career</p>
+                            
+                        </div>
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide className="m-6">
+                    <div className="card w-72 h-[250px] bg-base-100 shadow-xl m-6">
+                       
+                        <div className="card-body items-center text-center">
+                            <h2 className="card-title">Danial Morgan</h2>
+                            <span className="text-3xl text-green-900 opacity-30"><VscTriangleDown></VscTriangleDown></span>
+                            <p>I am so pleased with their classes.They have extra-ordinary instructors</p>
+                            
+                        </div>
+                    </div>
+
+                  
+                </SwiperSlide>
+                <SwiperSlide className="m-6">
+                    <div className="card w-72 h-[250px] bg-base-100 shadow-xl m-6">
+                       
+                        <div className="card-body items-center text-center">
+                            <h2 className="card-title">Rebeka sara</h2>
+                            <span className="text-3xl text-green-900 opacity-30"><VscTriangleDown></VscTriangleDown></span>
+                            <p>The best classes I ever had in my life.These practical knowledge will help me to choose my career</p>
+                            
+                        </div>
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide className="m-6">
+                    <div className="card w-72 h-[250px] bg-base-100 shadow-xl m-6">
+                       
+                        <div className="card-body items-center text-center">
+                            <h2 className="card-title">Sami quraeshi</h2>
+                            <span className="text-3xl text-green-900 opacity-30"><VscTriangleDown></VscTriangleDown></span>
+                            <p>The best vacation i ever passesd for these classes.I recommend all of you to do their courses</p>
+                            
+                        </div>
+                    </div>
+
+                  
+                </SwiperSlide>
+                <SwiperSlide className="m-6">
+                    <div className="card w-72 h-[250px] bg-base-100 shadow-xl m-6">
+                       
+                        <div className="card-body items-center text-center">
+                            <h2 className="card-title">Rebeka sara</h2>
+                            <span className="text-3xl text-green-900 opacity-30"><VscTriangleDown></VscTriangleDown></span>
+                            <p>The best classes I ever had in my life.These practical knowledge will help me to choose my career</p>
+                            
+                        </div>
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide className="m-6">
+                    <div className="card w-72 h-[250px] bg-base-100 shadow-xl m-6">
+                       
+                        <div className="card-body items-center text-center">
+                            <h2 className="card-title">Danial Morgan</h2>
+                            <span className="text-3xl text-green-900 opacity-30"><VscTriangleDown></VscTriangleDown></span>
+                            <p>I am so pleased with their classes.They have extra-ordinary instructors</p>
+                            
+                        </div>
+                    </div>
+
+                  
+                </SwiperSlide>
+                <SwiperSlide className="m-6">
+                    <div className="card w-72 h-[250px]  bg-base-100 shadow-xl m-6">
+                       
+                        <div className="card-body items-center text-center">
+                            <h2 className="card-title">Rebeka sara</h2>
+                            <span className="text-3xl text-green-900 opacity-30"><VscTriangleDown></VscTriangleDown></span>
+                            <p>The best classes I ever had in my life.These practical knowledge will help me to choose my career</p>
+                            
+                        </div>
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide className="m-6">
+                    <div className="card w-72 h-[250px] bg-base-100 shadow-xl m-6">
+                       
+                        <div className="card-body items-center text-center">
+                            <h2 className="card-title">Sami quraeshi</h2>
+                            <span className="text-3xl text-green-900 opacity-30"><VscTriangleDown></VscTriangleDown></span>
+                            <p>The best vacation i ever passesd for these classes.I recommend all of you to do their courses</p>
+                            
+                        </div>
+                    </div>
+
+                  
+                </SwiperSlide>
+                <SwiperSlide className="m-6">
+                    <div className="card w-72 h-[250px] bg-base-100 shadow-xl m-6">
+                       
+                        <div className="card-body items-center text-center">
+                            <h2 className="card-title">Rebeka sara</h2>
+                            <span className="text-3xl text-green-900 opacity-30"><VscTriangleDown></VscTriangleDown></span>
+                            <p>The best classes I ever had in my life.These practical knowledge will help me to choose my career</p>
+                            
+                        </div>
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide className="m-6">
+                    <div className="card w-72 h-[250px] bg-base-100 shadow-xl m-6">
+                       
+                        <div className="card-body items-center text-center">
+                            <h2 className="card-title">Danial Morgan</h2>
+                            <span className="text-3xl text-green-900 opacity-30"><VscTriangleDown></VscTriangleDown></span>
+                            <p>I am so pleased with their classes.They have extra-ordinary instructors</p>
+                            
+                        </div>
+                    </div>
+
+                  
+                </SwiperSlide>
+                <SwiperSlide className="m-6">
+                    <div className="card w-72 h-[250px] bg-base-100 shadow-xl m-6">
+                       
+                        <div className="card-body items-center text-center">
+                            <h2 className="card-title">Rebeka sara</h2>
+                            <span className="text-3xl text-green-900 opacity-30"><VscTriangleDown></VscTriangleDown></span>
+                            <p>The best classes I ever had in my life.These practical knowledge will help me to choose my career</p>
+                            
+                        </div>
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide className="m-6">
+                    <div className="card w-72 h-[250px] bg-base-100 shadow-xl m-6">
+                       
+                        <div className="card-body items-center text-center">
+                            <h2 className="card-title">Sami quraeshi</h2>
+                            <span className="text-3xl text-green-900 opacity-30"><VscTriangleDown></VscTriangleDown></span>
+                            <p>The best vacation i ever passesd for these classes.I recommend all of you to do their courses</p>
+                            
+                        </div>
+                    </div>
+
+                  
+                </SwiperSlide>
+                <SwiperSlide className="m-6">
+                    <div className="card w-72 h-[250px] bg-base-100 shadow-xl m-6">
+                       
+                        <div className="card-body items-center text-center">
+                            <h2 className="card-title">Rebeka sara</h2>
+                            <span className="text-3xl text-green-900 opacity-30"><VscTriangleDown></VscTriangleDown></span>
+                            <p>The best classes I ever had in my life.These practical knowledge will help me to choose my career</p>
+                            
+                        </div>
+                    </div>
+                </SwiperSlide>
+                  
+               
+                
 
             </Swiper>
         </div>
