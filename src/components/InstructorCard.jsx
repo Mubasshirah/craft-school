@@ -7,7 +7,7 @@ const InstructorCard = ({activity}) => {
         <figure><img src={instructor_image} alt="Album"/></figure>
         <div className="card-body">
           <h2 className="card-title">Instructor name: {instructor_name}</h2>
-          <p className="card-title">Instructor email: {instructor_email}</p>
+          <p>Instructor email: {instructor_email}</p>
          
         </div>
       </div>

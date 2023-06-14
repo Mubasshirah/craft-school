@@ -8,6 +8,8 @@ import Instructor from "../pages/Instructor/Instructor";
 import Class from "../pages/class/Class";
 import Login from "../pages/login/Login";
 import Register from "../pages/register/Register";
+import Enroll from "../pages/enroll/Enroll";
+import PrivateRoute from "./PrivateRoute";
 
   export const router = createBrowserRouter([
     {
@@ -33,6 +35,10 @@ import Register from "../pages/register/Register";
         {
             path:"/register",
             element:<Register></Register>
+        },
+        {
+          path:'/enroll',
+          element:<PrivateRoute><Enroll></Enroll></PrivateRoute>
         }
       ]
     },
