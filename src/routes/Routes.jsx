@@ -1,7 +1,7 @@
 import {
-    createBrowserRouter,
-    
-  } from "react-router-dom";
+  createBrowserRouter,
+
+} from "react-router-dom";
 import Main from "../layout/Main";
 import Home from "../pages/Home/Home";
 import Instructor from "../pages/Instructor/Instructor";
@@ -11,40 +11,62 @@ import Register from "../pages/register/Register";
 import Enroll from "../pages/enroll/Enroll";
 import PrivateRoute from "./PrivateRoute";
 import NotFound from "../components/NotFound";
+import DashBoard from "../layout/DashBoard";
+import MySelectedClasses from "../pages/studenDashboard/MySelectedClasses";
+import MyEnrolledClasses from "../pages/studenDashboard/MyEnrolledClasses";
 
-  export const router = createBrowserRouter([
+export const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Main></Main>,
+    children: [
+      {
+        path: "/",
+        element: <Home></Home>
+      },
+      {
+        path: "/instructor",
+        element: <Instructor></Instructor>
+      },
+      {
+        path: "/class",
+        element: <Class></Class>
+      },
+      {
+        path: "/login",
+        element: <Login></Login>
+      },
+      {
+        path: "/register",
+        element: <Register></Register>
+      },
+      {
+        path: '/enroll',
+        element: <PrivateRoute><Enroll></Enroll></PrivateRoute>
+      }
+      
+    ]
+  },
+  
     {
-      path: "/",
-      element: <Main></Main>,
+      path: '/dashboard',
+      element: <DashBoard></DashBoard>,
       children:[
         {
-            path:"/",
-            element:<Home></Home>
+          path: 'selected',
+          element: <MySelectedClasses></MySelectedClasses>
         },
         {
-            path:"/instructor",
-            element:<Instructor></Instructor>
-        },
-        {
-            path:"/class",
-            element:<Class></Class>
-        },
-        {
-            path:"/login",
-            element:<Login></Login>
-        },
-        {
-            path:"/register",
-            element:<Register></Register>
-        },
-        {
-          path:'/enroll',
-          element:<PrivateRoute><Enroll></Enroll></PrivateRoute>
+          path: 'enrolled',
+          element: <MyEnrolledClasses></MyEnrolledClasses>
         }
       ]
+
     },
-    {
-      path:'*',
-      element:<NotFound></NotFound>
-    }
-  ]);
+    
+  
+  {
+    path: '*',
+    element: <NotFound></NotFound>
+  }
+]);

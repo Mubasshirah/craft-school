@@ -7,7 +7,9 @@ const Navbar = () => {
     const { user, logOut } = useContext(AuthContext);
     const handleLogOut = () => {
         logOut()
-            .then(() => { })
+            .then(() => { 
+                localStorage.removeItem('access-token')
+            })
             .catch(error => console.log(error))
     }
     return (
@@ -25,7 +27,7 @@ const Navbar = () => {
                         {
                             user ?
                                 <>
-                                    <li><NavLink to='dashboard'>Dashboard</NavLink></li>
+                                    <li><NavLink to='/dashboard'>Dashboard</NavLink></li>
                                     <span className='ms-8'>
                                     <img src={user.photoURL} alt="" style={{ width: '35px', height: '35px', borderRadius: '50%', marginRight: '15px' }} data-toggle="tooltip" data-placement="top" title={user.displayName} />
                                 </span>

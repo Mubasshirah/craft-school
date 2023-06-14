@@ -4,6 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useContext } from 'react';
 import { AuthContext } from '../../provider/AuthProvider';
 import SocialLogin from '../../shared/SocialLogin';
+import Swal from 'sweetalert2';
 
 const Register = () => {
     const navigate=useNavigate();
@@ -16,14 +17,34 @@ const Register = () => {
             const createdUser=result.user;
             console.log(createdUser);
            updateUserPofile(data.name,data.photourl) 
-           
+           const newUser={name:data.name, email:data.email}
+             fetch('http://localhost:5000/users',{
+              method:'POST',
+              headers:{
+                'content-type':'application/json',
+              },
+              body:JSON.stringify(newUser)
+             })
+             .then(res=>res.json())
+             .then(data=>{
+              console.log(data)
+              if(data.insertedId){
+
                 reset();
-                navigate('/')
-         
-         
-        })
-        .catch(error=>console.log(error))
+                Swal.fire({
+                 position: 'top-end',
+                 icon: 'success',
+                 title: 'A new user has been added',
+                 showConfirmButton: false,
+                 timer: 1500
+               })
+              }
+             })
+             navigate('/');
+           })
+           .catch(error=>console.log(error))
         }
+        
     return (
         <div className="hero min-h-screen">
   <div className="hero-content flex-col lg:flex-row-reverse pt-48 md:pt-20">

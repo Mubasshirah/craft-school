@@ -1,10 +1,59 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useContext, useState } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { AuthContext } from "../provider/AuthProvider";
+import Swal from "sweetalert2";
+import useSelectedClass from "../hooks/useSelectedClass";
 
 
 const ActivityCard = ({activity}) => {
+    const { user } = useContext(AuthContext);
+    const navigate = useNavigate();
+    const [,refetch]=useSelectedClass();
+    const location = useLocation();
 
     const {name,image,_id,enrolled_students,instructor_name,instructor_image,instructor_email,available_seats,price}=activity;
+     const handleAddToSelect= item=>{
+        if (user && user.email) {
+            const selectedItem={id:_id,name,image,price,email:user.email};
+            console.log(selectedItem)
+            fetch('http://localhost:5000/selected', {
+              method: "POST",
+              headers: {
+                'content-type':'application/json'
+                },
+                body:JSON.stringify(selectedItem)
+            })
+              .then(res => res.json())
+              .then(data => {
+                
+                if (data.insertedId) {
+                refetch();
+                  Swal.fire({
+                    position: 'top-end',
+                    icon: 'success',
+                    title: 'You have selected it',
+                    showConfirmButton: false,
+                    timer: 1500
+                  })
+                }
+              })
+          }
+          else {
+            Swal.fire({
+              title: 'please login!',
+      
+              icon: 'warning',
+              showCancelButton: true,
+              confirmButtonColor: '#3085d6',
+              cancelButtonColor: '#d33',
+              confirmButtonText: 'OK!'
+            }).then((result) => {
+              if (result.isConfirmed) {
+                navigate('/login', { state: { from: location } })
+              }
+            })
+          }
+     }
     
     return (
         <div className="card lg:card-side bg-base-100 shadow-xl mt-10 mb-12">
@@ -17,11 +66,11 @@ const ActivityCard = ({activity}) => {
 
           <div>
            
-           <Link to='/enroll'>
-           <button  className='px-6 py-3   hover:bg-gray-100 hover:text-black text-white rounded-lg bg-opacity-30 bg-green-900'>
+           
+           <button onClick={() => { handleAddToSelect(activity) }}  className='px-6 py-3   hover:bg-gray-100 hover:text-black text-white rounded-lg bg-opacity-30 bg-green-900'>
                 Select
             </button>
-           </Link>
+           
           </div>
          
         </div>
